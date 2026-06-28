@@ -93,7 +93,7 @@
     \resumeSubheading
       {Rajshahi University of Engineering \& Technology}      % Argument 1: Institution
       {March 2022 - Present}                                % Argument 2: Date
-      BSc in Mechatronics Engineering | Expected Graduation Date May 2026                   % Argument 4: Extra Details
+      BSc in Mechatronics Engineering | Expected Graduation Date August 2026                   % Argument 4: Extra Details
 
     % --- Spacer to create the gap ---
     \resumeSubheadingSpacer
@@ -113,7 +113,18 @@
 \section{Work Experience}
 \begin{resumeSubHeadingList}
     \resumeSubheading
-      {Embedded Systems Engineer (Contract) | Aethes Armor (USA)}{March 2025 - Present}
+      {AI/ML Engineer (Contract) | DamDekho.com}{March 2026 - Present}
+      \begin{resumeItemList}
+        \resumeItem{Architected and developed the full agentic crawling, data cleaning, and ingestion pipeline for a large-scale price-comparison catalog.}
+        \resumeItem{Built an 8-stage AI normalization pipeline in \textbf{Python} using \textbf{LLMs} for structured field extraction and \textbf{vector embeddings} for semantic product matching against \textbf{PostgreSQL} + \textbf{pgvector}.}
+        \resumeItem{Implemented a 3-tier \textbf{LLM} and embedding provider chain (GPU node over \textbf{WebSocket} $\rightarrow$ local CPU inference $\rightarrow$ cloud), with a multi-provider router supporting hot-swappable backends.}
+        \resumeItem{Developed an autonomous \textbf{LLM}-driven agent in \textbf{Python} that reviews crawler configs, repairs catalog data, and approves normalized rows against a deterministic rubric via a typed \textbf{REST} API.}
+      \end{resumeItemList}
+
+      \resumeSubheadingSpacer
+
+    \resumeSubheading
+      {Embedded Systems Engineer (Contract) | Aethes Armor (USA)}{March 2025 - January 2026}
       \begin{resumeItemList}
         \resumeItem{Engineered a Debian based custom embedded Linux distribution for a security locker device using the \textbf{Yocto Project}, including writing custom device drivers and patching the kernel.}
         \resumeItem{Developed the device's core firmware, implementing \textbf{WebRTC} for live video-calling and \textbf{Websockets} for real-time control of peripherals.}
@@ -140,23 +151,23 @@
 
 
 
-%-----------PROJECTS-----------
-\section{Projects}
+%-----------RESEARCH & PROJECTS-----------
+\section{Research \& Projects}
 \begin{resumeSubHeadingList}
+    \resumeProjectHeading
+        {\textbf{StereoLite: A Novel Stereo Vision Architecture for Disparity Matching and Depth Estimation}}{}
+        \begin{resumeItemList}
+            \resumeItem{Designed a novel lightweight stereo matching architecture that fuses a tile-hypothesis cost-volume paradigm with an iterative refinement loop and learned convex upsampling, targeting real-time depth estimation on edge hardware.}
+            \resumeItem{Conducted a systematic literature review of $\sim$190 deep stereo matching papers and authored a comparative analysis spanning classical SGM to foundation-model-era methods, informing the architecture's design choices.}
+            \resumeItem{Ran a multi-phase ablation study (9 architectural variants A/B-tested in parallel on Modal A100s) covering cost-volume designs, slope-aware warping, context branches, and several loss-side interventions to isolate the contributing components.}
+            \resumeItem{Implemented the model in \textbf{PyTorch} with a custom multi-scale tile refinement loop and groupwise 1D cost volume, benchmarked against published lightweight stereo baselines on Scene Flow and indoor datasets.}
+        \end{resumeItemList}
+    \resumeSubheadingSpacer
     \resumeProjectHeading
         {\textbf{CORTEX-Health: An AI Assistant for Medical Practitioners} (PyTorch, FastAPI, OpenCV)}{}
         \begin{resumeItemList}
         \resumeItem{Developed a \textbf{FastAPI}-based API server to facilitate communication between an Android application (built with Flutter) and machine learning models. Used \textbf{PostgreSQL} as the database.}
         \resumeItem{Trained three YOLO-v8 models using \textbf{PyTorch} for disease diagnosis from medical images (e.g., X-RAY and CT scan reports).}
-        \end{resumeItemList}
-    \resumeSubheadingSpacer
-    \resumeProjectHeading
-        {\textbf{CORTEX Robotic Arm Controller Software} (PyQT, OpenCV, Matplotlib)}{}
-        \begin{resumeItemList}
-        \resumeItem{Created \textbf{Python}-based software for controlling robotic arms using forward and inverse kinematic algorithms.}
-        \resumeItem{Developed a GUI with \textbf{PyQT} to control and simulate robot movement with a 3D \textbf{Matplotlib} graph.}
-        \resumeItem{Designed a custom hardware stabilization algorithm, increasing load-carrying capacity by 5\%.}
-        \resumeItem{Implemented computer vision-based environmental awareness and object detection using \textbf{OpenCV}.}
         \end{resumeItemList}
 \end{resumeSubHeadingList}
 
@@ -172,10 +183,10 @@
         \end{resumeItemList}
 
     \resumeSubheading
-        {Champion– 6\textsuperscript{th} Kibo RPC Bangladesh Regional Round 2024}{}{}
+        {Champion - Bangladesh Round, 4\textsuperscript{th} Global - 6\textsuperscript{th} Kibo RPC 2024}{}{}
         {}
         \begin{resumeItemList}
-            \resumeItem{Achieved 1\textsuperscript{st} position in the Bangladesh selection round of the Kibo RPC competition, developing software to control a free-flying robot in zero gravity. Employed computer vision techniques for navigation and task execution.}
+            \resumeItem{Achieved 1\textsuperscript{st} position in the Bangladesh Round and 4\textsuperscript{th} position globally in the Kibo RPC competition, developing software to control a free-flying robot in zero gravity. Employed computer vision techniques for navigation and task execution.}
         \end{resumeItemList}
 
         
@@ -224,15 +235,6 @@
         \resumeSubheading
           {Machine Learning Specialization}{September 2023}
           {Issued by: Stanford Online}{}
-    \end{resumeSubHeadingList}
-
-%-----------CERTIFICATES-----------
-\section{References}
-    \begin{resumeSubHeadingList}
-        \resumeSubheading
-          {Saiam Bin Islam}{}
-          Founder\&CEO, Technowren\newline
-          Phone: +880 1677-482932
     \end{resumeSubHeadingList}
 
 %-------------------------------------------
