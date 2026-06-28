@@ -1,0 +1,239 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{amsmath}
+
+%----------PAGE SETUP----------
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%----------CUSTOM COMMANDS----------
+
+% List environment for major sections (e.g., Education, Experience)
+\newlist{resumeSubHeadingList}{itemize}{1}
+\setlist[resumeSubHeadingList]{leftmargin=0.15in, label={}, nosep}
+
+% Command for a subheading (Job Title, University, etc.)
+% Takes 4 arguments: #1=Title/Company, #2=Date, #3=Subtitle, #4=Location/Details
+\newcommand{\resumeSubheading}[2]{
+  \item
+    \begin{tabularx}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \small#2 \\
+    \end{tabularx}
+}
+
+\newcommand{\resumeSubheadingSpacer}{\item\vspace{2pt}}
+
+% List environment for bullet points under each subheading
+\newlist{resumeItemList}{itemize}{1}
+\setlist[resumeItemList]{leftmargin=0.25in, label=\textbullet, topsep=0.2em, itemsep=-0.2em, parsep=0em}
+
+% Command for a single bullet point item
+\newcommand{\resumeItem}[1]{\item\small #1}
+
+% Command for a project heading
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabularx}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textit{#2}
+    \end{tabularx}
+}
+
+%----------DOCUMENT START----------
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    {\Huge \scshape Nazib Abrar}
+    \vspace{7pt}
+    
+    \small
+    % \faPhone\ +8801952789398 \quad|\quad
+    \href{mailto:abrarnazib@gmail.com}{\faEnvelope\ \underline{abrarnazib@gmail.com}} \quad|\quad
+    \href{https://github.com/abrar-nazib}{\faGithub\ \underline{github.com/abrar-nazib}} \quad|\quad
+    \href{https://linkedin.com/in/abrar-nazib}{\faLinkedin\ \underline{linkedin.com/in/abrar-nazib}}
+\end{center}
+
+
+%-----------EDUCATION-----------
+\section{Education}
+\begin{resumeSubHeadingList}
+    % --- RUET Entry ---
+    \resumeSubheading
+      {Rajshahi University of Engineering \& Technology}      % Argument 1: Institution
+      {March 2022 - Present}                                % Argument 2: Date
+      BSc in Mechatronics Engineering | Expected Graduation Date May 2026                   % Argument 4: Extra Details
+
+    % --- Spacer to create the gap ---
+    \resumeSubheadingSpacer
+    
+    % --- Notre Dame College Entry ---
+    \resumeSubheading
+      {Notre Dame College}                                % Argument 1: Institution
+      {July 2018 - August 2020}                           % Argument 2: Date
+       HSC from Science | GPA 5.00                                          % Argument 4: Extra Details
+
+
+
+\end{resumeSubHeadingList}
+
+
+%-----------EXPERIENCE-----------
+\section{Work Experience}
+\begin{resumeSubHeadingList}
+    \resumeSubheading
+      {Embedded Systems Engineer (Contract) | Aethes Armor (USA)}{March 2025 - Present}
+      \begin{resumeItemList}
+        \resumeItem{Engineered a Debian based custom embedded Linux distribution for a security locker device using the \textbf{Yocto Project}, including writing custom device drivers and patching the kernel.}
+        \resumeItem{Developed the device's core firmware, implementing \textbf{WebRTC} for live video-calling and \textbf{Websockets} for real-time control of peripherals.}
+        \resumeItem{Integrated computer vision and \textbf{AI} functionalities using \textbf{TensorFlow-Lite} to enable intelligent device operations.}
+        \resumeItem{Built the complete web backend and server infrastructure for the system using \textbf{Django}.}
+        \resumeItem{Contributed to the hardware development lifecycle by assisting in \textbf{PCB} design reviews and Bill of Materials (BOM) generation.}
+      \end{resumeItemList}
+
+      \resumeSubheadingSpacer
+
+      \resumeSubheading
+      {Junior Software Developer (Part-Time) | FronTech Limited}{June 2023 - October 2025}
+      \begin{resumeItemList}
+        \resumeItem{Created well-documented libraries in \textbf{C++} for JRC Board (an ESP32-based microprocessor development board) to ensure compatibility with Arduino shields.}
+        \resumeItem{Led back-end development of a scalable alumni management system using \textbf{Django Rest Framework} and \textbf{PostgreSQL}.}
+        \resumeItem{Integrated \textbf{RabbitMQ} and \textbf{Celery} to handle asynchronous tasks, enabling efficient processing of time-consuming operations. Deployed the project in a microservice architecture using \textbf{Docker}, emphasizing scalability and seamless deployment.}
+        \resumeItem{Led the back-end development for the "\href{http://smartschoolbus.gov.bd}{\underline{smartschoolbus.gov.bd}}" project, a B2B solution built with \textbf{NodeJS}, \textbf{Express}, and \textbf{MongoDB} to improve school bus safety and efficiency for over 2,500 active users.}
+        \resumeItem{Managed \textbf{VPS} infrastructure, utilizing \textbf{Nginx} for traffic routing and access control, and implemented \textbf{CRON} jobs for automated database backups.}
+        \resumeItem{Implemented live video streaming in \textbf{RTMP} and \textbf{HLS} protocol.}
+
+      \end{resumeItemList}
+\end{resumeSubHeadingList}
+
+
+
+
+%-----------PROJECTS-----------
+\section{Projects}
+\begin{resumeSubHeadingList}
+    \resumeProjectHeading
+        {\textbf{CORTEX-Health: An AI Assistant for Medical Practitioners} (PyTorch, FastAPI, OpenCV)}{}
+        \begin{resumeItemList}
+        \resumeItem{Developed a \textbf{FastAPI}-based API server to facilitate communication between an Android application (built with Flutter) and machine learning models. Used \textbf{PostgreSQL} as the database.}
+        \resumeItem{Trained three YOLO-v8 models using \textbf{PyTorch} for disease diagnosis from medical images (e.g., X-RAY and CT scan reports).}
+        \end{resumeItemList}
+    \resumeSubheadingSpacer
+    \resumeProjectHeading
+        {\textbf{CORTEX Robotic Arm Controller Software} (PyQT, OpenCV, Matplotlib)}{}
+        \begin{resumeItemList}
+        \resumeItem{Created \textbf{Python}-based software for controlling robotic arms using forward and inverse kinematic algorithms.}
+        \resumeItem{Developed a GUI with \textbf{PyQT} to control and simulate robot movement with a 3D \textbf{Matplotlib} graph.}
+        \resumeItem{Designed a custom hardware stabilization algorithm, increasing load-carrying capacity by 5\%.}
+        \resumeItem{Implemented computer vision-based environmental awareness and object detection using \textbf{OpenCV}.}
+        \end{resumeItemList}
+\end{resumeSubHeadingList}
+
+%-----------LEADERSHIPS AND AWARDS-----------
+\section{Leaderships and Awards}
+\begin{resumeSubHeadingList}
+
+    \resumeSubheading
+        {Secretary of Programming Dept | Notre Dame Information Technology Club}{}{}
+        {}
+        \begin{resumeItemList}
+            \resumeItem{Led programming-related affairs, including contests and tutoring sessions for junior members.}
+        \end{resumeItemList}
+
+    \resumeSubheading
+        {Champion– 6\textsuperscript{th} Kibo RPC Bangladesh Regional Round 2024}{}{}
+        {}
+        \begin{resumeItemList}
+            \resumeItem{Achieved 1\textsuperscript{st} position in the Bangladesh selection round of the Kibo RPC competition, developing software to control a free-flying robot in zero gravity. Employed computer vision techniques for navigation and task execution.}
+        \end{resumeItemList}
+
+        
+    \resumeSubheading
+        {Global 11\textsuperscript{th} Position – International Rover Design Challenge 2023}{}{}
+        {}
+        \begin{resumeItemList}
+            \resumeItem{Contributed to Team Ogrodoot's best performance on IRDC by implementing computer vision based mars terrain segmentation system using SAM and designing inverse kinematics algorithm for robotic arm of the rover.}
+        \end{resumeItemList}
+        
+    \resumeSubheading
+        {First Runner-Up - Phitron Show Your Project Contest 2022}{}{}
+        {}
+        \begin{resumeItemList}
+            \resumeItem{Won the project showcase competition with CORTEX Robotic Arm Controller Software.}
+        \end{resumeItemList}
+        
+    \resumeSubheading
+        {Champion - DRMC Tech Carnival 2020}{}{}
+        {}
+        \begin{resumeItemList}
+            \resumeItem{Won the Line Follower Robot racing competition using "Thunder," an LFR controller software developed with C++.}
+        \end{resumeItemList}
+        
+    \resumeSubheading
+        {Finalist - Code Samurai 2024 (Hackathon)}{}{}
+        {}
+        \begin{resumeItemList}
+            \resumeItem{Advanced to the final round in a competitive field of 400+ teams, achieving 14th place in the Code Samurai 2024 Hackathon with an end-to-end solution for municipal solid waste management.}
+        \end{resumeItemList}
+        
+
+\end{resumeSubHeadingList}
+
+
+%-----------PROBLEM-SOLVING EXPERIENCE-----------
+\section{Problem-Solving Experience}
+    \begin{resumeItemList}
+        \resumeItem{Solved 85+ problems on LeetCode following the Neetcode.io roadmap, gaining a strong understanding of diverse data structures and algorithms. [\href{https://leetcode.com/u/abrar-nazib/}{\underline{Profile Link}}]}
+        \resumeItem{Codechef Rating 1550. [\href{https://codechef.com/users/abrarnazib}{\underline{Profile Link}}]}
+    \end{resumeItemList}
+
+%-----------CERTIFICATES-----------
+\section{Certificates}
+    \begin{resumeSubHeadingList}
+        \resumeSubheading
+          {Machine Learning Specialization}{September 2023}
+          {Issued by: Stanford Online}{}
+    \end{resumeSubHeadingList}
+
+%-----------CERTIFICATES-----------
+\section{References}
+    \begin{resumeSubHeadingList}
+        \resumeSubheading
+          {Saiam Bin Islam}{}
+          Founder\&CEO, Technowren\newline
+          Phone: +880 1677-482932
+    \end{resumeSubHeadingList}
+
+%-------------------------------------------
+\end{document}
