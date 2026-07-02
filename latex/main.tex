@@ -105,7 +105,7 @@
       \begin{resumeItemList}
         \resumeItem{Architected and developed the full agentic crawling, data cleaning, and ingestion pipeline for a large-scale price-comparison catalog.}
         \resumeItem{Built an 8-stage AI normalization pipeline in Python using LLMs for structured field extraction and vector embeddings for semantic product matching against PostgreSQL + pgvector.}
-        \resumeItem{Implemented a 3-tier LLM and embedding provider chain (GPU node over WebSocket $\rightarrow$ local CPU inference $\rightarrow$ cloud), with a multi-provider router supporting hot-swappable backends.}
+        \resumeItem{Implemented a 3-tier LLM and embedding provider chain (GPU node over WebSocket / local CPU inference / cloud), with a multi-provider router supporting hot-swappable backends.}
         \resumeItem{Developed an autonomous LLM-driven agent in Python that reviews crawler configs, repairs catalog data, and approves normalized rows against a deterministic rubric via a typed REST API.}
       \end{resumeItemList}
 
@@ -151,8 +151,18 @@
             \resumeItem{Implemented the model in PyTorch with a custom multi-scale tile refinement loop and groupwise 1D cost volume, benchmarked against published lightweight stereo baselines on Scene Flow and indoor datasets.}
         \end{resumeItemList}
     \resumeSubheadingSpacer
+    \newpage
     \resumeProjectHeading
-        {\textbf{CORTEX-Health: An AI Assistant for Medical Practitioners} (PyTorch, FastAPI, OpenCV)}{}
+        {\textbf{Vision-Based Autonomous Drone Navigation in GPS-Denied Environments}}{}
+        \begin{resumeItemList}
+            \resumeItem{Researched and prototyped an onboard perception and navigation stack for a PX4-based drone to fly autonomously in GPS-denied environments, fusing monocular and lightweight stereo vision for visual odometry and depth estimation.}
+            \resumeItem{Integrated MiDaS monocular depth estimation with YOLOv8 semantic segmentation for environmental understanding, and implemented an A*-based local planner for collision-avoidance trajectory generation.}
+            \resumeItem{Patched the PX4 flight controller firmware to disable GPS requirements and bridged the on-Raspberry Pi vision stack to PX4 over MAVLink, enabling closed-loop steering from onboard perception to motor commands.}
+            \resumeItem{Built a parallel ROS 2 Jazzy + Gazebo Harmonic simulation environment with per-pixel labeled worlds and a Blender-based mesh pipeline to validate the perception, planning, and control loop end-to-end before flight tests.}
+        \end{resumeItemList}
+    \resumeSubheadingSpacer
+    \resumeProjectHeading
+        {\textbf{CORTEX-Health: An AI Assistant for Medical Practitioners}}{}
         \begin{resumeItemList}
         \resumeItem{Developed a FastAPI-based API server to facilitate communication between an Android application (built with Flutter) and machine learning models. Used PostgreSQL as the database.}
         \resumeItem{Trained three YOLO-v8 models using PyTorch for disease diagnosis from medical images (e.g., X-RAY and CT scan reports).}
@@ -164,7 +174,14 @@
 \begin{resumeSubHeadingList}
 
     \resumeSubheading
-        {Champion - Bangladesh Round, 4\textsuperscript{th} Global - 6\textsuperscript{th} Kibo RPC 2024}{}{}
+        {Secretary of Programming Dept | Notre Dame Information Technology Club}{}{}
+        {}
+        \begin{resumeItemList}
+            \resumeItem{Led programming-related affairs, including contests and tutoring sessions for junior members.}
+        \end{resumeItemList}
+
+    \resumeSubheading
+        {Champion - Bangladesh Round, 4\textsuperscript{th} Global - 6\textsuperscript{th} Kibo RPC 2025}{}{}
         {}
         \begin{resumeItemList}
             \resumeItem{Achieved 1\textsuperscript{st} position in the Bangladesh Round and 4\textsuperscript{th} position globally in the Kibo RPC competition, developing software to control a free-flying robot in zero gravity. Employed computer vision techniques for navigation and task execution.}
