@@ -13,6 +13,8 @@
 \usepackage{tabularx}
 \usepackage{fontawesome5}
 \usepackage{amsmath}
+\usepackage[T1]{fontenc}
+\usepackage[default]{sourcesanspro}
 
 %----------PAGE SETUP----------
 \pagestyle{fancy}
@@ -92,7 +94,7 @@
     \resumeSubheading
       {Rajshahi University of Engineering \& Technology}      % Argument 1: Institution
       {2022 - 2026}                                        % Argument 2: Date
-      BSc in Mechatronics Engineering | CGPA 3.21/4.00      % Argument 4: Extra Details
+      BSc in Mechatronics Engineering | CGPA 3.23/4.00      % Argument 4: Extra Details
 
 \end{resumeSubHeadingList}
 
@@ -101,12 +103,10 @@
 \section{Work Experience}
 \begin{resumeSubHeadingList}
     \resumeSubheading
-      {AI/ML Engineer (Contract) | DamDekho.com}{March 2026 - Present}
+      {Hardware and Systems Engineer (Part-Time) | Siliconova}{February 2026 - Present}
       \begin{resumeItemList}
-        \resumeItem{Architected and developed the full agentic crawling, data cleaning, and ingestion pipeline for a large-scale price-comparison catalog.}
-        \resumeItem{Built an 8-stage AI normalization pipeline in Python using LLMs for structured field extraction and vector embeddings for semantic product matching against PostgreSQL + pgvector.}
-        \resumeItem{Implemented a 3-tier LLM and embedding provider chain (GPU node over WebSocket / local CPU inference / cloud), with a multi-provider router supporting hot-swappable backends.}
-        \resumeItem{Developed an autonomous LLM-driven agent in Python that reviews crawler configs, repairs catalog data, and approves normalized rows against a deterministic rubric via a typed REST API.}
+        \resumeItem{Assisted in SQA and testing of a high-speed networking application, exercising DPDK kernel-bypass networking and SPDK kernel-bypass management of high-speed SSD operations.}
+        \resumeItem{Managed the technical documentation and packaging of client deliverables.}
       \end{resumeItemList}
 
       \resumeSubheadingSpacer
@@ -115,7 +115,7 @@
       {Embedded Systems Engineer (Contract) | Aethes Armor (USA)}{March 2025 - January 2026}
       \begin{resumeItemList}
         \resumeItem{Engineered a Debian based custom embedded Linux distribution for a security locker device using the Yocto Project, including writing custom device drivers and patching the kernel.}
-        \resumeItem{Developed the device's core firmware, implementing WebRTC for live video-calling and Websockets for real-time control of peripherals.}
+        \resumeItem{Developed the device's core on-device application stack, implementing WebRTC for live video-calling and WebSockets for real-time control of peripherals.}
         \resumeItem{Integrated computer vision and AI functionalities using TensorFlow-Lite to enable intelligent device operations.}
         \resumeItem{Built the complete web backend and server infrastructure for the system using Django.}
         \resumeItem{Contributed to the hardware development lifecycle by assisting in PCB design reviews and Bill of Materials (BOM) generation.}
@@ -126,12 +126,13 @@
       \resumeSubheading
       {Junior Software Developer (Part-Time) | FronTech Limited}{June 2023 - October 2025}
       \begin{resumeItemList}
-        \resumeItem{Created well-documented libraries in C++ for JRC Board (an ESP32-based microprocessor development board) to ensure compatibility with Arduino shields.}
-        \resumeItem{Led back-end development of a scalable alumni management system using Django Rest Framework and PostgreSQL.}
-        \resumeItem{Integrated RabbitMQ and Celery to handle asynchronous tasks, enabling efficient processing of time-consuming operations. Deployed the project in a microservice architecture using Docker, emphasizing scalability and seamless deployment.}
+        \resumeItem{Created well-documented libraries in C++ for JRC Board (an ESP32-based microcontroller development board) to ensure compatibility with Arduino shields.}
         \resumeItem{Led the back-end development for the "\href{http://smartschoolbus.gov.bd}{\underline{smartschoolbus.gov.bd}}" project, a B2B solution built with NodeJS, Express, and MongoDB to improve school bus safety and efficiency for over 2,500 active users.}
+        \resumeItem{Contributed to the firmware development of the IoT attendance and vehicle tracking device deployed on the buses.}
+        \resumeItem{Developed a strategic algorithm that resolved network-instability-induced gaps in the device's attendance and tracking records through an offline synchronization mechanism.}
         \resumeItem{Managed VPS infrastructure, utilizing Nginx for traffic routing and access control, and implemented CRON jobs for automated database backups.}
         \resumeItem{Implemented live video streaming in RTMP and HLS protocol.}
+        \resumeItem{Integrated RabbitMQ and Celery to handle asynchronous tasks, enabling efficient processing of time-consuming operations, and deployed services in a microservice architecture using Docker for scalability and seamless deployment.}
 
       \end{resumeItemList}
 \end{resumeSubHeadingList}
@@ -174,17 +175,10 @@
 \begin{resumeSubHeadingList}
 
     \resumeSubheading
-        {Secretary of Programming Dept | Notre Dame Information Technology Club}{}{}
-        {}
-        \begin{resumeItemList}
-            \resumeItem{Led programming-related affairs, including contests and tutoring sessions for junior members.}
-        \end{resumeItemList}
-
-    \resumeSubheading
         {Champion - Bangladesh Round, 4\textsuperscript{th} Global - 6\textsuperscript{th} Kibo RPC 2025}{}{}
         {}
         \begin{resumeItemList}
-            \resumeItem{Achieved 1\textsuperscript{st} position in the Bangladesh Round and 4\textsuperscript{th} position globally in the Kibo RPC competition, developing software to control a free-flying robot in zero gravity. Employed computer vision techniques for navigation and task execution.}
+            \resumeItem{Achieved 1\textsuperscript{st} position in the Bangladesh Round and 4\textsuperscript{th} globally in the Kibo RPC, organized by JAXA in cooperation with NASA, developing software to control NASA's Astrobee free-flying robot aboard the ``Kibo'' Japanese Experiment Module of the International Space Station. Employed computer vision techniques for navigation and task execution in zero gravity.}
         \end{resumeItemList}
 
         
@@ -215,6 +209,14 @@
         \begin{resumeItemList}
             \resumeItem{Advanced to the final round in a competitive field of 400+ teams, achieving 14th place in the Code Samurai 2024 Hackathon with an end-to-end solution for municipal solid waste management.}
         \end{resumeItemList}
+
+    \resumeSubheading
+        {Secretary of Programming Dept | Notre Dame Information Technology Club}{}{}
+        {}
+        \begin{resumeItemList}
+            \resumeItem{Led programming-related affairs, including contests and tutoring sessions for junior members.}
+        \end{resumeItemList}
+
         
 
 \end{resumeSubHeadingList}
