@@ -1,0 +1,188 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{graphicx}
+\usepackage[T1]{fontenc}
+\usepackage[default]{sourcesanspro}
+
+%----------PAGE SETUP----------
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting -- matches main.tex
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%----------CUSTOM COMMANDS----------
+\newlist{resumeSubHeadingList}{itemize}{1}
+\setlist[resumeSubHeadingList]{leftmargin=0.15in, label={}, nosep}
+
+\newlist{resumeItemList}{itemize}{1}
+\setlist[resumeItemList]{leftmargin=0.25in, label=\textbullet, topsep=0.2em, itemsep=-0.2em, parsep=0em}
+
+\newcommand{\resumeItem}[1]{\item\small #1}
+
+% Bold lead-in for a block, matching the resume's subheading weight
+\newcommand{\suppHeading}[2]{
+  \item
+    \begin{tabularx}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \small#2 \\
+    \end{tabularx}
+}
+
+% Figure with a small italic caption underneath
+\newcommand{\suppFigure}[3]{%
+  \vspace{-4pt}
+  \begin{center}
+  \begin{minipage}{\textwidth}
+    \centering
+    \includegraphics[width=#2]{#1}\\[2pt]
+    {\footnotesize\itshape #3}
+  \end{minipage}
+  \end{center}
+  \vspace{-6pt}
+}
+
+% Full-page-width figure that fills the remaining vertical space on its page
+\newcommand{\suppFullFigure}[2]{%
+  \vfill
+  \begin{center}
+    \includegraphics[width=\textwidth]{#1}\\[3pt]
+    {\footnotesize\itshape #2}
+  \end{center}
+  \vfill
+}
+
+%----------DOCUMENT START----------
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    {\Huge \scshape Nazib Abrar}
+    \vspace{4pt}
+
+    {\large Technical Supplement: Projects, Platforms, and Verification}
+\end{center}
+
+\vspace{6pt}
+
+%-----------EMBEDDED LINUX-----------
+\section{Embedded Linux Platforms}
+\begin{resumeItemList}
+    \resumeItem{\textbf{OrangePi CM4 and Radxa CM3} (Rockchip RK3566). Client project comprising custom carrier board development, an RKNN based computer vision stack, and a hardware accelerated GStreamer pipeline, deployed on a custom Yocto distribution built for both boards.}
+    \resumeItem{\textbf{Raspberry Pi CM4 and Raspberry Pi Zero 2W} (Broadcom BCM2711 and BCM2710A1). Client projects covering a security delivery locker with WebRTC video conferencing and hardware accelerated video recording, including GStreamer pipeline development using \texttt{v4l2src}.}
+    \resumeItem{\textbf{BeagleY-AI and BeagleBone Green Wireless} (Texas Instruments AM67A and AM3358). Conducted tutoring sessions on the Texas Instruments SDK at the RUET IoT Club, covering device driver development and the AI ISP and NPU hardware acceleration SDKs.}
+\end{resumeItemList}
+
+\suppFullFigure{assets/embedded_systems/embedded_linux_devices.jpg}%
+{Single board computers and compute modules used in the projects described above.}
+
+\newpage
+
+%-----------MICROCONTROLLERS-----------
+\section{Microcontroller Platforms}
+\begin{resumeItemList}
+    \resumeItem{\textbf{STM32H7 and STM32G4}. Client project comprising firmware development for a CAN analyzer capable of inspecting a live CAN bus and streaming its traffic for real time data visualization.}
+    \resumeItem{\textbf{ESP32-P4 with ESP32-C5, and ESP32-P4 with ESP32-C6}. Client project implementing non-AI video calling over WebRTC using \texttt{esp-peer}.}
+    \resumeItem{\textbf{ESP32-CAM}. Employed as the camera node across a range of projects.}
+    \resumeItem{\textbf{Interfaces and toolchains}. Practical experience with the SPI, I2C, and CSI camera interfaces, and firmware development in STM32CubeIDE, STM32CubeMX, ESP-IDF, and the Arduino IDE.}
+\end{resumeItemList}
+
+\suppFullFigure{assets/embedded_systems/microcontrollers.jpg}%
+{Microcontroller development boards used for firmware and peripheral driver work.}
+
+\newpage
+
+%-----------PROJECT DEMONSTRATIONS-----------
+\section{Project Demonstrations}
+\begin{resumeSubHeadingList}
+    \suppHeading{Vision-Based Autonomous Drone Navigation in GPS-Denied Environments}{}
+    \begin{resumeItemList}
+        \resumeItem{Research walkthrough covering the approach, perception stack, and planning: \href{https://youtu.be/0HMXJcbxA3w}{\underline{youtu.be/0HMXJcbxA3w}}}
+        \resumeItem{Flight demonstration: \href{https://youtu.be/mjQc9S_NIv8}{\underline{youtu.be/mjQc9S\_NIv8}}}
+    \end{resumeItemList}
+
+    \item\vspace{2pt}
+
+    \suppHeading{Robotic Arm Inverse Kinematics Control}{}
+    \begin{resumeItemList}
+        \resumeItem{Inverse kinematics with visual feedback, servo driven: \href{https://youtu.be/yXRN9Aov4zM}{\underline{youtu.be/yXRN9Aov4zM}}}
+        \resumeItem{Inverse kinematics, stepper driven: \href{https://youtube.com/shorts/-wWf4OxTI5E}{\underline{youtube.com/shorts/-wWf4OxTI5E}}}
+    \end{resumeItemList}
+
+    \item\vspace{2pt}
+
+    \suppHeading{Line Follower Robot ``Thunder'' (Champion, DRMC Tech Carnival 2020)}{}
+    \begin{resumeItemList}
+        \resumeItem{Short demonstration of the C++ controller software: \href{https://youtube.com/shorts/ZHi7nnWHWrQ}{\underline{youtube.com/shorts/ZHi7nnWHWrQ}}}
+    \end{resumeItemList}
+\end{resumeSubHeadingList}
+
+%-----------KIBO RPC-----------
+\section{Kibo Robot Programming Challenge (JAXA and NASA)}
+\begin{resumeItemList}
+    \resumeItem{The Kibo-RPC is hosted by the \textbf{Japan Aerospace Exploration Agency (JAXA)} in cooperation with \textbf{NASA}. Participating teams develop software that autonomously controls \textbf{Astrobee}, NASA's free-flying robot, inside the ``Kibo'' Japanese Experiment Module aboard the \textbf{International Space Station}.}
+    \resumeItem{Competing as \textbf{Team Cortex Robotics} (Bangladesh), the team secured first position in the national round and \textbf{fourth position globally} in the on-orbit final, completing the mission in 3:42 with three of four correct image matches and correct identification of the target item.}
+    \resumeItem{\textbf{On-orbit execution of the team's program aboard the ISS:} \href{https://youtu.be/sHPJ4LExIgM}{\underline{youtu.be/sHPJ4LExIgM}}}
+\end{resumeItemList}
+
+\begin{center}
+    \begin{minipage}[t]{0.575\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{assets/embedded_systems/kibo_rpc_jaxa.png}\\[3pt]
+        {\footnotesize\itshape Official JAXA final round standings.\\Rank 4, Bangladesh, Cortex Robotics.}
+    \end{minipage}\hfill
+    \begin{minipage}[t]{0.395\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{assets/embedded_systems/kibo_rpc_news.png}\\[3pt]
+        {\footnotesize\itshape The Business Standard, 4 August 2025.\\National coverage of the team's qualification.}
+    \end{minipage}
+\end{center}
+
+\vspace{2pt}
+
+\newpage
+
+%-----------CERTIFICATES-----------
+\section{Verification and Certificates}
+\begin{resumeItemList}
+    \resumeItem{\textbf{International Rover Design Challenge 2023}. Eleventh position globally with Team Ogrodoot (RUET), issued by the Space Robotics Society.}
+    \resumeItem{\textbf{Machine Learning Specialization}. Stanford Online and DeepLearning.AI, September 2023. Verification: \href{https://coursera.org/verify/specialization/T6GAYS73CU62}{\underline{coursera.org/verify/specialization/T6GAYS73CU62}}}
+\end{resumeItemList}
+
+\suppFigure{assets/embedded_systems/Team_ogrodoot_certificate.jpeg}{0.72\textwidth}%
+{International Rover Design Challenge 2023, Space Robotics Society.}
+
+\vspace{2pt}
+
+\begin{center}
+    \includegraphics[width=0.72\textwidth,page=1]{assets/Coursera_Cert.pdf}\\[2pt]
+    {\footnotesize\itshape Machine Learning Specialization, Stanford Online and DeepLearning.AI.}
+\end{center}
+
+%-------------------------------------------
+\end{document}
