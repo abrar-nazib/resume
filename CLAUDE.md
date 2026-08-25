@@ -29,9 +29,18 @@ mv pdf/supplement.pdf pdf/nazib_abrar_technical_supplement.pdf
 
 It must be built from the repo root: its `\includegraphics` paths are repo-relative (`assets/...`), so compiling from inside `latex/` fails to find the images.
 
+[latex/combined.tex](latex/combined.tex) is a third, optional deliverable for applications that accept only one file (Google Forms, single-upload portals). It contains no content of its own: it `\includepdf`s the two finished PDFs with a divider page between them, so it must be built **last**, after both of the above have been built and renamed.
+
+```bash
+pdflatex -interaction=nonstopmode -output-directory=pdf latex/combined.tex
+mv pdf/combined.pdf pdf/nazib_abrar_resume_with_supplement.pdf
+```
+
+Because it consumes the renamed PDFs rather than the `.tex` sources, editing `main.tex` or `supplement.tex` does not change the fused output until those two are rebuilt first. It is 7 pages (2 + 1 divider + 4). The résumé and supplement remain the primary deliverables; the fused file is only for single-upload situations, and is never a replacement for them.
+
 Single pass is enough — the document has no cross-references or bibliography needing a second run. Requires the `fontawesome5` and `sourcesanspro` packages (Debian: `texlive-fonts-extra`).
 
-The `.aux`, `.log`, and `.out` files for both documents are tracked in git and change on every build; commit them along with the PDFs, matching existing history. Do not commit a stray `pdf/main.pdf` or `pdf/supplement.pdf` — rename them first.
+The `.aux`, `.log`, and `.out` files for both documents are tracked in git and change on every build; commit them along with the PDFs, matching existing history. Do not commit a stray `pdf/main.pdf`, `pdf/supplement.pdf`, or `pdf/combined.pdf` — rename them first.
 
 ## Typography
 

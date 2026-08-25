@@ -1,0 +1,52 @@
+% Fused deliverable: resume, a divider page, then the technical supplement.
+% For applications that accept only one file (Google Forms, single-upload portals).
+% Requires pdf/nazib_abrar_mte_ruet_resume.pdf and pdf/nazib_abrar_technical_supplement.pdf
+% to be built first. Build from the repo root -- the \includepdf paths are repo-relative.
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage[empty]{fullpage}
+\usepackage{pdfpages}
+\usepackage[hidelinks]{hyperref}
+\usepackage[T1]{fontenc}
+\usepackage[default]{sourcesanspro}
+
+\pagestyle{empty}
+
+\begin{document}
+
+%----------RESUME----------
+\includepdf[pages=-]{pdf/nazib_abrar_mte_ruet_resume.pdf}
+
+%----------DIVIDER----------
+\newpage
+\thispagestyle{empty}
+\vspace*{\fill}
+\begin{center}
+    {\Huge \scshape Attachment}
+
+    \vspace{10pt}
+    \rule{0.45\textwidth}{0.4pt}
+    \vspace{14pt}
+
+    {\Large Technical Supplement}
+
+    \vspace{18pt}
+    \begin{minipage}{0.78\textwidth}
+        \centering
+        \large
+        The following pages provide further detail on the work experience,
+        platforms, and projects referenced in the preceding r\'esum\'e,
+        together with demonstrations of the delivered systems and
+        verification of the listed credentials.
+    \end{minipage}
+
+    \vspace{24pt}
+    {\large Nazib Abrar}
+\end{center}
+\vspace*{\fill}
+
+%----------SUPPLEMENT----------
+\includepdf[pages=-]{pdf/nazib_abrar_technical_supplement.pdf}
+
+\end{document}
