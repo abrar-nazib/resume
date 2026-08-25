@@ -24,7 +24,7 @@ The supplement builds the same way and is renamed the same way:
 
 ```bash
 pdflatex -interaction=nonstopmode -output-directory=pdf latex/supplement.tex
-mv pdf/supplement.pdf pdf/nazib_abrar_technical_supplement.pdf
+mv pdf/supplement.pdf pdf/nazib_abrar_technical_attachment.pdf
 ```
 
 It must be built from the repo root: its `\includegraphics` paths are repo-relative (`assets/...`), so compiling from inside `latex/` fails to find the images.
@@ -33,7 +33,7 @@ It must be built from the repo root: its `\includegraphics` paths are repo-relat
 
 ```bash
 pdflatex -interaction=nonstopmode -output-directory=pdf latex/combined.tex
-mv pdf/combined.pdf pdf/nazib_abrar_resume_with_supplement.pdf
+mv pdf/combined.pdf pdf/nazib_abrar_resume_with_attachment.pdf
 ```
 
 Because it consumes the renamed PDFs rather than the `.tex` sources, editing `main.tex` or `supplement.tex` does not change the fused output until those two are rebuilt first. It is 7 pages (2 + 1 divider + 4). The résumé and supplement remain the primary deliverables; the fused file is only for single-upload situations, and is never a replacement for them.
