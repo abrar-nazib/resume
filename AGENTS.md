@@ -6,7 +6,7 @@ This repository publishes Nazib Abrar's résumé materials. It contains no
 application code, package manifest, or automated test suite.
 
 - `latex/main.tex` is the primary two-page résumé.
-- `latex/supplement.tex` is the four-page technical attachment distributed
+- `latex/attachment.tex` is the four-page technical attachment distributed
   alongside the résumé.
 - `latex/combined.tex` creates the optional single-upload PDF: the résumé, a
   divider page, and the attachment.
@@ -46,8 +46,8 @@ pdflatex -interaction=nonstopmode -output-directory=pdf latex/main.tex
 mv pdf/main.pdf pdf/nazib_abrar_mte_ruet_resume.pdf
 
 # Technical attachment
-pdflatex -interaction=nonstopmode -output-directory=pdf latex/supplement.tex
-mv pdf/supplement.pdf pdf/nazib_abrar_technical_attachment.pdf
+pdflatex -interaction=nonstopmode -output-directory=pdf latex/attachment.tex
+mv pdf/attachment.pdf pdf/nazib_abrar_technical_attachment.pdf
 
 # Optional single-upload document; run only after the two commands above
 pdfannotextractor pdf/nazib_abrar_mte_ruet_resume.pdf
@@ -67,13 +67,13 @@ changes and before building the combined PDF.
 
 Commit the updated named PDFs together with their corresponding tracked LaTeX
 auxiliary and `.pax` files. Do not leave `pdf/main.pdf`,
-`pdf/supplement.pdf`, or `pdf/combined.pdf` in the working tree; rename them to
+`pdf/attachment.pdf`, or `pdf/combined.pdf` in the working tree; rename them to
 the committed deliverable names above.
 
 ## Layout-sensitive areas
 
 - `main.tex` has a deliberate `\newpage` in Research & Projects to force the
   two-page layout. Reassess its placement after changes that affect height.
-- `supplement.tex` has three deliberate `\newpage` commands, one topic per
+- `attachment.tex` has three deliberate `\newpage` commands, one topic per
   page. Figure sizing and vertical spacing affect its four-page layout.
 - Build from the repository root because graphics paths are repository-relative.

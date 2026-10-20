@@ -12,6 +12,7 @@
 \usepackage[english]{babel}
 \usepackage{tabularx}
 \usepackage{fontawesome5}
+\usepackage{graphicx}
 \usepackage{amsmath}
 \usepackage[T1]{fontenc}
 \usepackage[default]{sourcesanspro}
@@ -76,15 +77,26 @@
 \begin{document}
 
 %----------HEADING----------
-\begin{center}
+\noindent
+\begin{minipage}[c]{0.95in}
+    \hfill
+\end{minipage}%
+\begin{minipage}[c]{\dimexpr\textwidth-1.9in\relax}
+    \centering
     {\Huge \scshape Nazib Abrar}
     \vspace{7pt}
-    
+
     \small
     \faPhone\ +8801952789398 \quad|\quad
     \href{mailto:abrarnazib@gmail.com}{\faEnvelope\ \underline{abrarnazib@gmail.com}} \quad|\quad
     \href{https://github.com/abrar-nazib}{\faGithub\ \underline{github.com/abrar-nazib}}
-\end{center}
+\end{minipage}%
+\begin{minipage}[c]{0.95in}
+    \raggedleft
+    \setlength{\fboxrule}{0.4pt}%
+    \setlength{\fboxsep}{0pt}%
+    \fcolorbox{black}{white}{\includegraphics[width=0.80in]{assets/profile-photo.jpg}}
+\end{minipage}
 
 
 %-----------EDUCATION-----------
@@ -176,8 +188,8 @@
         \end{resumeItemList}
 \end{resumeSubHeadingList}
 
-%-----------LEADERSHIPS AND AWARDS-----------
-\section{Leaderships and Awards}
+%-----------LEADERSHIP AND AWARDS-----------
+\section{Leadership and Awards}
 \begin{resumeSubHeadingList}
 
     \resumeSubheading
